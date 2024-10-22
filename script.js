@@ -6,8 +6,23 @@ const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/She
 
 
 
+const numberCount = {};
+
 function getRandomNumber() {
-  return Math.floor(Math.random() * 10) + 1;
+  let num;
+
+  do {
+    num = Math.floor(Math.random() * 15) + 1;
+  } while (numberCount[num] >= 2);
+
+ 
+  if (numberCount[num]) {
+    numberCount[num]++;
+  } else {
+    numberCount[num] = 1;
+  }
+
+  return num;
 }
 
 // Ambil data dari Google Spreadsheet
@@ -21,13 +36,16 @@ fetch(url)
       const card = document.createElement('div');
       card.classList.add('div-card');
       card.innerHTML = `
+        <div style="height:40px;"></div>
         <div class="col-md-4">
                 <div class="card" style="width: 10rem;">
                     <div class="card-body">
                       <h3 class="card-title">${row[1]}</h3>
-                      <a href="${row[2]}" class="btn  tombol-lihat ">Lihat</a>
+                      
                     </div>
+                    <a href="${row[2]}">
                     <img src="image/${getRandomNumber()}.jpg" class="card-img-top" alt="...">
+                    </a>
                   </div>
         </div>
             `;
