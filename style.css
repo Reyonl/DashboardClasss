@@ -22,7 +22,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 }
 
 .jumbotron::before {
@@ -52,17 +52,17 @@ h1 {
 }
 
 
-#card-container{
+#card-container {
 	text-align: center;
 	margin: 10px;
+	justify-content: space-between;
 }
 
 
-.card-img-top{
+.card-img-top {
 	object-fit: cover
-
 }
 
-.card{
+.card {
 	object-fit: cover;
 }
