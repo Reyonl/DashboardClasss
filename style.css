@@ -18,10 +18,11 @@ h1 {
 	background-size: cover;
 	background-position: center;
 	color: white;
-	height: 500px;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
 }
 
 .jumbotron::before {
@@ -51,6 +52,17 @@ h1 {
 }
 
 
-.container-card {
+#card-container{
+	text-align: center;
 	margin: 10px;
+}
+
+
+.card-img-top{
+	object-fit: cover
+
+}
+
+.card{
+	object-fit: cover;
 }
