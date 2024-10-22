@@ -65,4 +65,16 @@ h1 {
 
 .card {
 	object-fit: cover;
+	margin-bottom: 20px;
+	box-shadow: 3px 3px 15px -6px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 3px 3px 15px -6px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: 3px 3px 15px -6px rgba(0, 0, 0, 0.9);
+	transition: .5s;
+}
+
+.card:hover {
+	box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.9);
+	transform: scale(1.05);
 }
