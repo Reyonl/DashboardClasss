@@ -24,8 +24,8 @@ fetch(url)
         <div class="col-md-4">
                 <div class="card" style="width: 10rem;">
                     <div class="card-body">
-                      <h5 class="card-title">${row[1]}</h5>
-                      <a href="${row[2]}" class="btn btn-light tombol-lihat">Lihat</a>
+                      <h3 class="card-title">${row[1]}</h3>
+                      <a href="${row[2]}" class="btn  tombol-lihat ">Lihat</a>
                     </div>
                     <img src="image/${getRandomNumber()}.jpg" class="card-img-top" alt="...">
                   </div>

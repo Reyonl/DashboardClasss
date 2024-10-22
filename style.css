@@ -78,3 +78,14 @@ h1 {
 	-moz-box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.9);
 	transform: scale(1.05);
 }
+
+.tombol-lihat {
+	transition: .5s;
+	background-color: rgb(204, 210, 214);
+}
+
+.tombol-lihat:hover {
+	transform: scale(1.4);
+	background-color: lightskyblue;
+
+}
