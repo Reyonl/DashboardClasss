@@ -36,9 +36,9 @@ fetch(url)
       const card = document.createElement('div');
       card.classList.add('div-card');
       card.innerHTML = `
-        <div style="height:40px;"></div>
+        <div style="height:20px;"></div>
         <div class="col-md-4">
-                <div class="card" style="width: 10rem;">
+                <div class="card" >
                     <div class="card-body">
                       <h3 class="card-title">${row[1]}</h3>
                       
