@@ -2,6 +2,16 @@ html {
 	scroll-behavior: smooth;
 }
 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	div#card-container.row {
+		justify-content: center;
+	}
+}
+
+
+
 body {
 	background: #00bcd4;
 }
