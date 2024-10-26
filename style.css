@@ -65,9 +65,9 @@ h1 {
 .container.content {
 	text-align: center;
 }
-.container.content.sub{
-	/* background-color: antiquewhite; */
-}
+/* /* .container.content.sub{
+	background-color: antiquewhite;
+}  */
 
 .display-4.member {
 	color: black;
