@@ -1,6 +1,6 @@
 
-const sheetID = '1KgWhNlmDAZFruuyjuOXM4Zxk4omVHn7suGTS6LXSvvc';  // Ganti dengan ID Google Spreadsheet-mu
-const apiKey = 'AIzaSyAgraP2YhLT8wS7FK6okvIj4sf-FvBEZDc';    // Ganti dengan API Key yang kamu dapat dari Google Cloud Console
+const sheetID = '1ebsPutw4in7G8hs9FU4m6s5LXjY0pzYOlsgznq-hrlw';  // Ganti dengan ID Google Spreadsheet-mu
+const apiKey = 'AIzaSyDrvbkBlhES4rpqVtZ7hkAW1Mm1KV3_318';    // Ganti dengan API Key yang kamu dapat dari Google Cloud Console
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`;
 
 
