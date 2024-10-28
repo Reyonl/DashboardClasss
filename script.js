@@ -26,11 +26,13 @@ const mahasiswa = [
   { no: 25, nama: "Bagas Junianto", domain: "https://bagasjuni.tplp4.com/" },
   { no: 26, nama: "Nadzel Ramadania", domain: "https://nadzel.tplp4.com/" },
   { no: 27, nama: "Annisa Salsabila Maharani", domain: "https://annisa.tplp4.com/" },
-  { no: 28, nama: "Satria Anggito Abimannyu", domain: null },
-  { no: 29, nama: "Rahmah Yunita", domain: "https://rahmahyunita.tplp4.com/" },
+  { no: 28, nama: "Satria Anggito Abimannyu", domain: "" },
+  { no: 29, nama: "Rahmah Yunita", domain: "https://rahmahyunita.tplp4.com//" },
   { no: 30, nama: "Satrio Panca Nugroho", domain: "https://satriopanca.tplp4.com/home/index.html" },
-  { no: 31, nama: "Bintang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" }
+  { no: 31, nama: "BIntang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" },
+  { no: 32, nama: "Fafian Prima Abimanyu", domain: "https://fafianprimaa.github.io/Website-Web1/" }
 ];
+
 
 
 
