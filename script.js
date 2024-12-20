@@ -1,6 +1,7 @@
 const mahasiswa = [
   { no: 1, nama: "Chairil Syahrain", domain: "https://chairilsyahrain.tplp4.com/" },
   { no: 2, nama: "Reyon Lau Jiemin", domain: "https://coba.tplp4.com/" },
+  { no: 33, nama: "Zakia Larasati", domain: "https://zakialaras.tplp4.com/" },
   { no: 3, nama: "Ghilman Yazid Abdullah", domain: "https://ghilman.tplp4.com/PortofolioIT_Project/index.html" },
   { no: 4, nama: "Muhammad Rizki Yusnadi", domain: "https://mrizkiyusnadi.tplp4.com/" },
   { no: 5, nama: "Andrian", domain: "https://andrian.tplp4.com/" },
