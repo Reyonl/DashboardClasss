@@ -1,10 +1,9 @@
 const mahasiswa = [
   { no: 1, nama: "Chairil Syahrain", domain: "https://chairilsyahrain.tplp4.com/" },
   { no: 2, nama: "Reyon Lau Jiemin", domain: "https://coba.tplp4.com/" },
-  { no: 33, nama: "Zakia Larasati", domain: "https://zakialaras.tplp4.com/" },
   { no: 3, nama: "Ghilman Yazid Abdullah", domain: "https://ghilman.tplp4.com/PortofolioIT_Project/index.html" },
-  { no: 4, nama: "Muhammad Rizki Yusnadi", domain: "https://mrizkiyusnadi.tplp4.com/" },
-  { no: 5, nama: "Andrian", domain: "https://andrian.tplp4.com/" },
+  { no: 4, nama: "Andrian", domain: "https://andrian.tplp4.com/" },
+  { no: 5, nama: "Rahmah Yunita", domain: "https://rahmahyunita.tplp4.com//" },
   { no: 6, nama: "Novriyansah Ramadhan Alfiqri", domain: "https://novriyansah.tplp4.com/" },
   { no: 7, nama: "Dipa Dwi Atmadja", domain: "https://dipadwi.tplp4.com/" },
   { no: 8, nama: "Satinudi Telaumbanua", domain: "https://satinudin.tplp4.com/" },
@@ -28,25 +27,22 @@ const mahasiswa = [
   { no: 26, nama: "Nadzel Ramadania", domain: "https://nadzel.tplp4.com/" },
   { no: 27, nama: "Annisa Salsabila Maharani", domain: "https://annisa.tplp4.com/" },
   { no: 28, nama: "Satria Anggito Abimannyu", domain: "https://satriaanggito.tplp4.com/" },
-  { no: 29, nama: "Rahmah Yunita", domain: "https://rahmahyunita.tplp4.com//" },
+  { no: 29, nama: "Muhammad Rizki Yusnadi", domain: "https://mrizkiyusnadi.tplp4.com/" },
   { no: 30, nama: "Satrio Panca Nugroho", domain: "https://satriopanca.tplp4.com/home/index.html" },
-  { no: 31, nama: "BIntang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" },
-  { no: 32, nama: "Fafian Prima Abimanyu", domain: "https://fafianprimaa.github.io/Website-Web1/" }
+  { no: 31, nama: "Bintang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" },
+  { no: 32, nama: "Fafian Prima Abimanyu", domain: "https://fafianprimaa.github.io/Website-Web1/" },
+  { no: 33, nama: "Zakia Dwi hadi Larasati", domain: "zakialaras.tplp4.com" }
 ];
-
-
-
-
 
 const numberCount = {};
 
 function getRandomNumber() {
   let num;
-  let attempts = 0;  // Tambahkan counter percobaan untuk menghindari infinite loop
+  let attempts = 0;
   do {
     num = Math.floor(Math.random() * 15) + 1;
     attempts++;
-  } while (numberCount[num] >= 2 && attempts < 30); // Batasi percobaan hingga 30 kali
+  } while (numberCount[num] >= 2 && attempts < 30);
 
   if (numberCount[num]) {
     numberCount[num]++;
@@ -57,11 +53,8 @@ function getRandomNumber() {
   return num;
 }
 
-
-// Menggunakan data dari objek mahasiswa
 const cardContainer = document.getElementById('card-container');
 
-// Looping untuk menampilkan data di dalam card
 mahasiswa.forEach(data => {
   const card = document.createElement('div');
   card.classList.add('div-card');
@@ -80,3 +73,38 @@ mahasiswa.forEach(data => {
   `;
   cardContainer.appendChild(card);
 });
+
+function filterCards() {
+  const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+  document.querySelectorAll('#card-container .col-md-4').forEach(card => {
+    const name = card.querySelector('.card-title').textContent.toLowerCase();
+    if (name.includes(searchQuery)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+const updateDarkMode = () => {
+  const isDarkMode = localStorage.getItem('dark-mode') === 'enabled';
+  if (isDarkMode) {
+    body.classList.add('dark-mode');
+    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    body.classList.remove('dark-mode');
+    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+};
+
+darkModeToggle.addEventListener('click', () => {
+  const isDarkMode = body.classList.toggle('dark-mode');
+  localStorage.setItem('dark-mode', isDarkMode ? 'enabled' : 'disabled');
+  updateDarkMode();
+});
+
+// Apply mode on load
+updateDarkMode();

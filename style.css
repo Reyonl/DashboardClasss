@@ -11,6 +11,51 @@ html {
 }
 
 
+  .hidden {
+      display: none;
+    }
+    #searchBar {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+	body.dark-mode {
+		background-color: #121212;
+		color: #ffffff;
+	  }
+	  .dark-mode .jumbotron {
+		background-color: #1f1f1f;
+		color: #ffffff;
+	  }
+	  .dark-mode input {
+		background-color: #333;
+		color: #fff;
+	  }
+	  .dark-mode .fa-search {
+		color: #ccc;
+	  }
+
+	  .dark-mode .card {
+		background-color: #1e1e1e;
+		color: #ffffff;
+		box-shadow: 3px 3px 15px -6px rgba(255, 255, 255, 0.2);
+		border: 1px solid #333;
+	  }
+	  
+	  .dark-mode .card:hover {
+		box-shadow: 3px 3px 15px 5px rgba(255, 255, 255, 0.2);
+	  }
+	  
+	  .dark-mode .tombol-lihat {
+		background-color: #333;
+		color: #fff;
+	  }
+	  
+	  .dark-mode .tombol-lihat:hover {
+		background-color: #555;
+	  }	  
 
 body {
 	background-color: antiquewhite;

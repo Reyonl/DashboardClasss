@@ -14,23 +14,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
+
+  <button 
+  id="darkModeToggle" 
+  class="btn btn-secondary" 
+  style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+  <i class="fas fa-moon"></i>
+</button>
+
   <div class="jumbotron jumbotron-fluid">
     <div class="container content">
-  
-      <h1 class="display-4 silkscreen-bold">05TPLP004</h1>
-      <p class="lead oleo-script-swash-caps-regular ">Tugas Pemprograman Web 1</p>
+        <h1 class="display-4 silkscreen-bold">05TPLP004</h1>
+        <p class="lead oleo-script-swash-caps-regular">Tugas Pemprograman Web 1</p>
     </div>
-  </div>
+</div>
 
-  <div class="member jumbotron-fluid">
+<div class="member jumbotron-fluid">
     <div class="container content sub">
-      <h3 class="display-4 permanent-marker-regular">OUR MEMBERS</h3>
-      <p class="lead permanent-marker-regular">Click The Image To See Their Portfolio</p>
+        <h3 class="display-4 permanent-marker-regular">OUR MEMBERS</h3>
+        <p class="lead permanent-marker-regular">Click The Image To See Their Portfolio</p>
+        <div style="height: 40px;"></div>
+        <!-- Search Bar -->
+        <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto;">
+            <input 
+                type="text" 
+                id="searchBar" 
+                placeholder="Searh By Name Here..." 
+                oninput="filterCards()" 
+                style="width: 100%; padding: 10px 40px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 25px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); outline: none; transition: 0.3s;">
+            <i 
+                style="position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-size: 20px; color: #888;" 
+                class="fa fa-search"></i>
+        </div>
+      
     </div>
-  </div>
+</div>
 
   <div id="card-container" class="row permanent-marker-regular">
     <!-- Cards will be inserted here -->
