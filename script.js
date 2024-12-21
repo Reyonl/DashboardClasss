@@ -31,7 +31,7 @@ const mahasiswa = [
   { no: 30, nama: "Satrio Panca Nugroho", domain: "https://satriopanca.tplp4.com/home/index.html" },
   { no: 31, nama: "Bintang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" },
   { no: 32, nama: "Fafian Prima Abimanyu", domain: "https://fafianprimaa.github.io/Website-Web1/" },
-  { no: 33, nama: "Zakia Dwi hadi Larasati", domain: "zakialaras.tplp4.com" }
+  { no: 33, nama: "Zakia Dwi hadi Larasati", domain: "https://zakialaras.tplp4.com/" }
 ];
 
 const numberCount = {};
