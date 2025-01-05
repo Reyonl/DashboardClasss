@@ -15,7 +15,7 @@ const mahasiswa = [
   { no: 14, nama: "Aldiansyah", domain: "https://aldiansyah.tplp4.com/" },
   { no: 15, nama: "Sabrillah Sabastian", domain: "https://sabrillahhh.tplp4.com/" },
   { no: 16, nama: "Arung Zidane Dwiaji", domain: "https://arungzidanedwiaji.tplp4.com/" },
-  { no: 17, nama: "Muhammad Hafidlul Mujib", domain: "https://hafidlul.tplp4.com/" },
+  { no: 17, nama: "Muhammad Hafidlul Mujib", domain: "https://mhafidlulmujib.tplp4.com/" },
   { no: 18, nama: "Rizal Fazri", domain: "https://rizalfazri.tplp4.com/" },
   { no: 19, nama: "Riedo Adriano", domain: "https://riedoadriano.tplp4.com/" },
   { no: 20, nama: "Muhammad Farhan Arotsid", domain: "https://mfarotsid.tplp4.com" },
@@ -28,7 +28,7 @@ const mahasiswa = [
   { no: 27, nama: "Annisa Salsabila Maharani", domain: "https://annisa.tplp4.com/" },
   { no: 28, nama: "Satria Anggito Abimannyu", domain: "https://satriaanggito.tplp4.com/" },
   { no: 29, nama: "Muhammad Rizki Yusnadi", domain: "https://mrizkiyusnadi.tplp4.com/" },
-  { no: 30, nama: "Satrio Panca Nugroho", domain: "https://satriopanca.tplp4.com/home/index.html" },
+  { no: 30, nama: "Satrio Panca Nugroho", domain: "https://satriopanca.tplp4.com/" },
   { no: 31, nama: "Bintang Syaputra", domain: "https://bintangsyaputra.tplp4.com/" },
   { no: 32, nama: "Fafian Prima Abimanyu", domain: "https://fafianprimaa.github.io/Website-Web1/" },
   { no: 33, nama: "Zakia Dwi hadi Larasati", domain: "https://zakialaras.tplp4.com/" }
@@ -86,25 +86,20 @@ function filterCards() {
   });
 }
 
-const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeToggle = document.getElementById('toggle-btn');
+const toggleIcon = document.getElementById('toggle-icon');
 const body = document.body;
 
-const updateDarkMode = () => {
-  const isDarkMode = localStorage.getItem('dark-mode') === 'enabled';
-  if (isDarkMode) {
-    body.classList.add('dark-mode');
-    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-  } else {
-    body.classList.remove('dark-mode');
-    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-  }
+const applyDarkMode = (isEnabled) => {
+  body.classList.toggle('dark-mode', isEnabled);
+  toggleIcon.classList.replace(isEnabled ? 'fa-moon' : 'fa-sun', isEnabled ? 'fa-sun' : 'fa-moon');
 };
 
 darkModeToggle.addEventListener('click', () => {
-  const isDarkMode = body.classList.toggle('dark-mode');
+  const isDarkMode = !body.classList.contains('dark-mode');
   localStorage.setItem('dark-mode', isDarkMode ? 'enabled' : 'disabled');
-  updateDarkMode();
+  applyDarkMode(isDarkMode);
 });
 
-// Apply mode on load
-updateDarkMode();
+// Apply dark mode on load
+applyDarkMode(localStorage.getItem('dark-mode') === 'enabled');

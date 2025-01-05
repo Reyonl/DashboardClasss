@@ -57,6 +57,28 @@ html {
 		background-color: #555;
 	  }	  
 
+	  .dark-mode-toggle {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
+	}
+	
+	.dark-mode-toggle button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		font-size: 24px;
+		color: #000;
+		transition: color 0.3s ease;
+	}
+	
+	body.dark-mode .dark-mode-toggle button {
+		color: #fff;
+	}
+	
+	
+
 body {
 	background-color: antiquewhite;
 }
