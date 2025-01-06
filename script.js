@@ -15,7 +15,7 @@ const mahasiswa = [
   { no: 14, nama: "Aldiansyah", domain: "https://aldiansyah.tplp4.com/" },
   { no: 15, nama: "Sabrillah Sabastian", domain: "https://sabrillahhh.tplp4.com/" },
   { no: 16, nama: "Arung Zidane Dwiaji", domain: "https://arungzidanedwiaji.tplp4.com/" },
-  { no: 17, nama: "Muhammad Hafidlul Mujib", domain: "https://mhafidlulmujib.tplp4.com/" },
+  { no: 17, nama: "Muhammad Hafidlul Mujib", domain: "https://mhafidlullmujibbb.tplp4.com/" },
   { no: 18, nama: "Rizal Fazri", domain: "https://rizalfazri.tplp4.com/" },
   { no: 19, nama: "Riedo Adriano", domain: "https://riedoadriano.tplp4.com/" },
   { no: 20, nama: "Muhammad Farhan Arotsid", domain: "https://mfarotsid.tplp4.com" },
